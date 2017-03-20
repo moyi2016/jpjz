@@ -1,0 +1,44 @@
+Table: goods
+-------------+--------------+------+-----+---------+---------
+ Field       | Type         | Null | Key | Default | Remarks 
+-------------+--------------+------+-----+---------+---------
+ id          | BIGINT(19)   | NO   | PRI |         |         
+ name        | VARCHAR(255) | YES  |     |         | 名字      
+ price       | DECIMAL(10)  | YES  |     |         | 价格      
+ inventory   | INT(10)      | YES  |     |         | 库存数量    
+ description | VARCHAR(255) | YES  |     |         | 描述      
+ img         | VARCHAR(255) | YES  |     |         | 基础图片    
+-------------+--------------+------+-----+---------+---------
+
+Table: menu
+-------------+--------------+------+-----+---------+---------
+ Field       | Type         | Null | Key | Default | Remarks 
+-------------+--------------+------+-----+---------+---------
+ id          | BIGINT(19)   | NO   | PRI |         |         
+ code        | VARCHAR(255) | YES  |     |         | 编码      
+ name        | VARCHAR(255) | YES  |     |         | 名字      
+ parent_code | VARCHAR(255) | YES  |     |         | 上级编码    
+ sort        | INT(10)      | YES  |     |         | 排序      
+ icon        | VARCHAR(255) | YES  |     |         | 图标      
+ level       | INT(10)      | YES  |     |         | 层级      
+ node        | INT(10)      | YES  |     |         | 是否有下节点  
+-------------+--------------+------+-----+---------+---------
+
+Table: user
+-------------+--------------+------+-----+---------+---------
+ Field       | Type         | Null | Key | Default | Remarks 
+-------------+--------------+------+-----+---------+---------
+ id          | BIGINT(19)   | NO   | PRI |         |         
+ code        | VARCHAR(255) | YES  |     |         | 编码      
+ name        | VARCHAR(255) | YES  |     |         | 名字      
+ pass        | VARCHAR(255) | YES  |     |         | 密码      
+ weixin      | VARCHAR(255) | YES  |     |         | 微信      
+ qq          | VARCHAR(255) | YES  |     |         | qq      
+ phone       | VARCHAR(255) | YES  |     |         | 电话      
+ email       | VARCHAR(255) | YES  |     |         | 邮箱      
+ adress      | VARCHAR(255) | YES  |     |         | 地址      
+ create_time | DATETIME(19) | YES  |     |         | 创建时间    
+ level       | VARCHAR(255) | YES  |     |         | 等级      
+ photo       | VARCHAR(255) | YES  |     |         | 头像      
+-------------+--------------+------+-----+---------+---------
+

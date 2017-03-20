@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>iview example</title>
+    <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <script type="text/javascript" src="http://v1.vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview@1.0.1/dist/iview.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <Menu mode="horizontal" :theme="theme1" active-key="1">
+        <Menu-item v-for="val in menuList">
+            {{val.name}}
+        </Menu-item>
+    </Menu>
+
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            theme1:"primary",
+            menuList:[]
+        },
+        methods: {
+            loadMenu:function () {
+                var me = this;
+                axios.get("/menu/list").then(function (response) {
+                    me.menuList = response.data;
+                }).catch(function (error) {
+                    console.info(error);
+                });
+            }
+        }
+    });
+    vm.loadMenu();
+</script>
+<style>
+
+</style>
+</body>
+</html>
