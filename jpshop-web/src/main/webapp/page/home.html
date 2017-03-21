@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>iview example</title>
+    <title>精致的产品商店</title>
     <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
     <script type="text/javascript" src="http://v1.vuejs.org/js/vue.min.js"></script>
     <script type="text/javascript" src="http://unpkg.com/iview@1.0.1/dist/iview.min.js"></script>
@@ -10,12 +10,49 @@
 </head>
 <body>
 <div id="app">
+    <Card class="top-loli">
+        <div>
+            <img class="top-loli-logo" src="../img/logo.png" />
+        </div>
+    </Card>
     <Menu mode="horizontal" :theme="theme1" active-key="1">
         <Menu-item v-for="val in menuList">
             {{val.name}}
         </Menu-item>
     </Menu>
 
+    <Carousel>
+        <Carousel-item>
+            <div class="demo-carousel">
+                <div>
+                    <img src="../img/MIX-heise!600x600.jpg"/>
+                </div>
+                <div>
+                    <p>xxxx1</p>
+                    <p>xxxx1</p>
+                    <p>xxxx1</p>
+                </div>
+            </div>
+        </Carousel-item>
+        <Carousel-item>
+            <div class="demo-carousel">
+                <div>
+                    <img src="../img/MIX-heise!600x600.jpg"/>
+                </div>
+
+            </div>
+        </Carousel-item>
+        <Carousel-item>
+            <div class="demo-carousel">
+
+            </div>
+        </Carousel-item>
+        <Carousel-item>
+            <div class="demo-carousel">
+
+            </div>
+        </Carousel-item>
+    </Carousel>
 </div>
 <script>
     var vm = new Vue({
@@ -39,6 +76,20 @@
 </script>
 <style>
 
+    .top-loli{
+        height: 90px;
+        border-bottom: 2px solid chocolate;
+        padding: 0px;
+    }
+    .top-loli-logo{
+        height: 60px;
+    }
+    .demo-carousel div{
+        float: left;
+    }
+    .demo-carousel div p{
+        margin-top: 20px;
+    }
 </style>
 </body>
 </html>

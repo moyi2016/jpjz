@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <script type="text/javascript" src="http://v1.vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview@1.0.1/dist/iview.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="head">
+    <Row>
+        <i-col span="8">
+            <img class="img-logo" src="img/logo.png">
+        </i-col>
+        <i-col span="8" offset="8">
+            <div style="text-align: right;margin-right: 20px;margin-top: 20px;font-size: 14px; color: white">
+                <a style="color: white" href="/login">登录</a>/<a style="color: white" href="/register">注册</a>
+            </div>
+        </i-col>
+    </Row>
+</div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#head',
+        data: {
+        },
+        methods: {
+
+        }
+    });
+</script>
+<style>
+    #head{
+        background-color: cornflowerblue;
+    }
+    .img-logo{
+        height: 60px;
+    }
+</style>
+</html>

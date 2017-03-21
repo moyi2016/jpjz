@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+<#include "head.html"/>
+
+<div id="reg">
+    <Row>
+        <i-col span="12">
+            <div class="reg-ex">
+                <Timeline style="margin-left:20px;">
+                    <Timeline-item>
+                        <p class="time">1976年</p>
+                        <p class="content">Apple I 问世</p>
+                    </Timeline-item>
+                    <Timeline-item>
+                        <p class="time">1984年</p>
+                        <p class="content">发布 Macintosh</p>
+                    </Timeline-item>
+                    <Timeline-item>
+                        <p class="time">2007年</p>
+                        <p class="content">发布 iPhone</p>
+                    </Timeline-item>
+                    <Timeline-item>
+                        <p class="time">2010年</p>
+                        <p class="content">发布 iPad</p>
+                    </Timeline-item>
+                    <Timeline-item>
+                        <p class="time">2011年10月5日</p>
+                        <p class="content">史蒂夫·乔布斯去世</p>
+                    </Timeline-item>
+                </Timeline>
+            </div>
+        </i-col>
+        <i-col span="12" >
+            <div class="reg-form">
+                <form>
+                    <Card style="width:340px">
+                        <p style="text-align: center;font-size: 16px">用户注册</p>
+                        <i-input :value.sync="name" placeholder="请输入用户名" class="form-item"></i-input>
+                        <br>
+                        <i-input :value.sync="pass" type="password" placeholder="请输入密码"
+                                 class="form-item"></i-input>
+                        <br>
+                        <i-input :value.sync="rePass" type="password" placeholder="再次确认密码"
+                                class="form-item"></i-input>
+                        <br>
+                        <i-input :value.sync="phone" placeholder="请输入电话"
+                                 style="width: 205px;margin-top: 20px"></i-input>
+                        <i-button type="primary" style="margin-top: 20px;">获取验证码</i-button>
+                        <br>
+                        <i-input :value.sync="iCode" placeholder="短信验证码" class="form-item"></i-input>
+                        <br>
+                        <i-input :value.sync="email" type="email" placeholder="请输入邮箱"
+                                 class="form-item"></i-input>
+                        <br>
+                        <i-input :value.sync="vCode" type="email" placeholder="图形验证码"
+                                 style="width: 205px;margin-top: 20px"></i-input>
+                        <i-button type="primary" style="margin-top: 20px;">获取验证码</i-button>
+                        <br>
+                        <i-button type="success" class="form-item">确认提交</i-button>
+                    </Card>
+                </form>
+            </div>
+        </i-col>
+    </Row>
+</div>
+</body>
+<script>
+    var reg = new Vue({
+        el: '#reg',
+        data: {},
+        methods: {}
+    });
+</script>
+<style>
+    #reg{
+        height: 580px;
+    }
+    .reg-ex{
+        background: url("../img/reg-ex.jpg");
+        height: 500px;
+        width: 600px;
+        margin-left: 100px;
+        margin-top: 50px;
+        color: white;
+        border-radius: 20px;
+    }
+    .reg-form{
+        margin-top: 60px;
+        margin-left: 100px;
+        width: 400px;
+        height: 400px;
+     }
+    .form-item{
+        width: 300px;margin-top: 20px
+    }
+    .time{
+        font-size: 16px;
+    }
+    .content{
+        font-size: 14px;
+    }
+</style>
+
+</html>
